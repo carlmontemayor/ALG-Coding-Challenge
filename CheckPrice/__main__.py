@@ -5,8 +5,7 @@ def main():
     print("Hello World")
 
     myCheckPrice = CheckPrice()
-    myCheckPrice.priceSayHello()
-    myCheckPrice.navigateToTravelers()
+    myCheckPrice.submitTravelForm()
     myCheckPrice.terminate()
 
 if __name__ == "__main__":
