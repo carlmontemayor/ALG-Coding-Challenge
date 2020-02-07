@@ -6,6 +6,17 @@ from CheckPrice.CheckPrice import CheckPrice
 
 
 class TestCheckPrice(unittest.TestCase): 
+    def setup(self):
+        """
+        Set up the browser, with Options and additional specifications
+        """
+        
+        #Instantiate CheckPrice class
+
+
+                
+
+        
     def test_hello(self):
        """
        Test the priceSayHello() function
