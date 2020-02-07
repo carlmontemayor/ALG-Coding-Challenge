@@ -3,6 +3,11 @@ from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.support.ui import Select
 from selenium.webdriver.common.action_chains import ActionChains
 
+#TODO
+#   - Finish selecting options on landing page
+#   - Submit form
+#
+#
 
 browser = webdriver.Chrome()
 
@@ -24,6 +29,15 @@ actions.send_keys(Keys.ARROW_DOWN)
 actions.send_keys(Keys.ENTER)
 actions.perform()
 
+toEl = '/html/body/div[5]/div/div/div[1]/div[1]/div/div[2]/div[1]/div/div/div[1]/form/div/div[1]/div[1]/div[2]/div/div/div[1]/div/input'
+
+dropDown = browser.find_element_by_xpath(toEl).click()
+
+actions = ActionChains(browser)
+actions.send_keys(Keys.ARROW_DOWN)
+actions.send_keys(Keys.ARROW_DOWN)
+actions.send_keys(Keys.ENTER)
+actions.perform()
 
 
 
