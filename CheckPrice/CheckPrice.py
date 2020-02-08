@@ -34,10 +34,15 @@ class CheckPrice():
         # Track prices of flight/package
         self.price = 0.0
 
-    def priceSayHello(self):
-        return("Hello from CheckPrice")
+        # Keep Allegiant web page
+        self.url = self.browser.current_url
+
+
+    def checkBrowser(self):
+        return(self.url)
+        
     
-    def navigateToTravelers(self):
+    def submitTravelForm(self):
         """
         Navigate through any random city, city pairing 
         and get to the Traveler's page.
@@ -138,6 +143,7 @@ class CheckPrice():
 
         sleep(10)
         
+    
         
 
     def terminate(self):
