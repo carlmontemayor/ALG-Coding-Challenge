@@ -15,6 +15,10 @@ from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.support.ui import Select
 from selenium.webdriver.common.action_chains import ActionChains
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
+from selenium.webdriver.common.by import By
+
 
 # Import additional modules
 from time import sleep
@@ -141,12 +145,50 @@ class CheckPrice():
 
         button = self.browser.find_element_by_xpath(submitButtonXPath).click()
 
+    
+    def fillTravelersForm(self):
+        """
+        After filling in destination/return forms, complete
+        navigate to the Travelers form and check the price.
+        """
+        
+        sleep(5)
+
+        # Delete cookies pop-up
+        privacyXPath = '/html/body/section/span'
+        privacyPathButton = self.browser.find_element_by_xpath(privacyXPath).click()
+
+        sleep(5)
+
+        # Click continue
+        continueButtonXPath = '/html/body/div[5]/div/div/div/div/div/div/div/div/div[1]/div/div[2]/div/div[6]/div[3]/button'
+        continueButton = self.browser.find_element_by_xpath(continueButtonXPath).click()
+
         sleep(10)
         
-    
+
+        continueButtonClass = 'continue'
+        continueButton = self.browser.find_element_by_class_name(continueButtonClass)
+
+        sleep(5)
+
+        while not self.browser.find_elements_by_class_name('allegiant_traveller_form'):
+            sleep(4)    
+            continueButton = self.browser.find_element_by_class_name(continueButtonClass)
+            
+            sleep(1)
+            continueButton.click()
+
+            sleep(1)
+       
+        print('at trevleres')
         
+            
 
     def terminate(self):
+        """
+        Closes the browser after successful completion and quits the browser.
+        """
         self.browser.close()
         self.browser.quit()
 
