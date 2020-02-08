@@ -6,6 +6,7 @@ def main():
 
     myCheckPrice = CheckPrice()
     myCheckPrice.submitTravelForm()
+    myCheckPrice.fillTravelersForm()
     myCheckPrice.terminate()
 
 if __name__ == "__main__":
