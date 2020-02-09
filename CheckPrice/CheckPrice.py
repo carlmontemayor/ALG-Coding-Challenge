@@ -5,10 +5,8 @@
 # booking. 
 
 # TODO
-# - Finish top comments
-# - Finish commands/submit a flight
 # - Include logging
-
+# - mistake in asserting, look 
 
 # Import Selenium Webdriver modules
 from selenium import webdriver
@@ -19,15 +17,16 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.by import By
 
-
 # Import additional modules
 from time import sleep
-
 
 # Allegiant Landing Page
 ALLEGIANT_URL = 'https://www.allegiantair.com/'
 
 class CheckPrice():
+    """
+    Initialize class variables such as the browser and prices
+    """
     def __init__(self):
         # Create and initialize Chrome browser
         self.browser = webdriver.Chrome()
@@ -36,24 +35,40 @@ class CheckPrice():
         self.browser.get(ALLEGIANT_URL)
         
         # Track prices of flight/package
-        self.price = 0.0
+        self.prices = []
+
+        # Price of departing flight
+        self.departPrice = 0.0
+
+        # Price of returning flight
+        self.returnPrice = 0.0
 
         # Keep Allegiant web page
         self.url = self.browser.current_url
 
+        # Final price
+        self.finalPrice = 0.0
 
+    """
+    Check and ensure that we are on the correct page
+    """
     def checkBrowser(self):
+        # Return the browsers URL
         return(self.url)
         
-    
+    """
+    Once at the landing page, fill in the form items to submit a potential
+    flight
+    """
     def submitTravelForm(self):
         """
         Navigate through any random city, city pairing 
         and get to the Traveler's page.
         """  
-        # Add assert Allegiant in browser.title to test 
+        # Print notification submitting form
+        print("Submitting form...")
 
-        # Let animations load
+        # Let animations/page load
         sleep(1)
 
         # Close initial pop-up
@@ -75,6 +90,7 @@ class CheckPrice():
                         'iv[1]/div/div/div[1]/form/div/div[1]/div[1]/div[1]/di'
                         'v/div/div[1]/div/input')
 
+        # Click the dropdown menu for the start date city
         fromDropDownOption = self.browser.find_element_by_xpath(fromDropDown).click()
 
         # Start Actions to select using keyboard
@@ -83,115 +99,212 @@ class CheckPrice():
         actions.send_keys(Keys.ENTER)
         actions.perform()
 
+        # Let animations/page load
         sleep(1)
 
+        # Click the dropdown menu for the return city 
         toDropDown = ('/html/body/div[5]/div/div/div[1]/div[1]/div/div[2]/div'
                       '[1]/div/div/div[1]/form/div/div[1]/div[1]/div[2]/div/d'
                       'iv/div[1]/div/input')
 
-         
+        # Select return city
         toDropDownOption = self.browser.find_element_by_xpath(toDropDown).click()
 
+        # Set actions to set a random flight for return
         actions = ActionChains(self.browser)
         actions.send_keys(Keys.ARROW_DOWN)
         actions.send_keys(Keys.ARROW_DOWN)
         actions.send_keys(Keys.ENTER)
         actions.perform()
 
+        # Let animations/page load
         sleep(1)
         
-        # Set dates for travel
+        # Click button to select depart
         departButtonIdClass = 'datepicker-toggle'
-
         departButton = self.browser.find_element_by_class_name(departButtonIdClass)
         departButton.click()
 
+        # Let animations/page load
         sleep(1)
 
+        # Locate xpath for date to depart
         departDateXPath = ('/html/body/div[5]/div/div/div[1]/div[1]/div/div[2]'
                            '/div[1]/div/div/div[1]/form/div/div[1]/div[2]/div[1'
                            ']/div/div/div/div[2]/table/tbody/tr[5]/td[2]/a')
 
-        # try xpath using find 24/date
+        # Select date to depart
+        setDateDepart = self.browser.find_element_by_xpath(departDateXPath).click()
 
-        setDateDepart = self.browser.find_element_by_xpath(departDateXPath)
-        setDateDepart.click()
-
+        # Let animations/page load
         sleep(1)
 
+        # Find xpath for return button
         returnButtonXPath = ('/html/body/div[5]/div/div/div[1]/div[1]/div/div'
                              '[2]/div[1]/div/div/div[1]/form/div/div[1]/div[2]'
                              '/div[2]/div/div/div/button')
 
+        # Click on return button
         returnButton = self.browser.find_element_by_xpath(returnButtonXPath).click()
 
+        # Let animations/page load
         sleep(1)
 
+        # Select date to return 
         returnDateXPath = ('/html/body/div[5]/div/div/div[1]/div[1]/div/div[2'
                            ']/div[1]/div/div/div[1]/form/div/div[1]/div[2]/di'
                            'v[2]/div/div/div/div[2]/table/tbody/tr[5]/td[6]/a')
 
-        setDateReturn = self.browser.find_element_by_xpath(returnDateXPath)
-        setDateReturn.click()
+        # Click on return date
+        setDateReturn = self.browser.find_element_by_xpath(returnDateXPath).click()
 
-
+        # Let animations/page load
         sleep(1)
-
 
         # Filling form, submitting
         submitButtonXPath = ('/html/body/div[5]/div/div/div[1]/div[1]/div/div'
                              '[2]/div[1]/div/div/div[1]/form/div/div[1]/div[4]'
                              '/div/button')
-
+        
+        # Submit the travel form
         button = self.browser.find_element_by_xpath(submitButtonXPath).click()
 
+        # If form does submits correctly, return True
+        if not button:
+            print("Form Submitted!\n")
+            return(True)
+        else:
+            return(False)
+
     
+    """
+    After selecting a flight, continue navigating to the traveler's form
+    Perform assertion once at the traveler's form
+    """
     def fillTravelersForm(self):
         """
         After filling in destination/return forms, complete
         navigate to the Travelers form and check the price.
         """
-        
+      
+        # Print navigation notification
+        print("Navigating through traveler's")
+
+        # Let animations/page load
         sleep(5)
 
         # Delete cookies pop-up
         privacyXPath = '/html/body/section/span'
         privacyPathButton = self.browser.find_element_by_xpath(privacyXPath).click()
 
+        # Let animations/page load
         sleep(5)
 
+        # Locate departing flight price XPath
+        departPricesPath = ('/html/body/div[5]/div/div/div/div/div/div/div/div'
+                        '/div[1]/div/div[2]/div/div[4]/div/div[5]/div/div/'
+                        'div/form/fieldset/div/div/ul/li/label/span[2]/spa'
+                        'n/span[3]')
+
+        # Get the departing price
+        departPrices = self.browser.find_element_by_xpath(departPricesPath) 
+
+        # Filter price
+        departPrices = str(departPrices.text).replace('$', '').split() 
+
+        # Set departing price
+        self.departPrice = departPrices[1]
+
+        # Locate returning flight price
+        returnPricesPath = ('/html/body/div[5]/div/div/div/div/div/div/div/di'
+                            'v/div[1]/div/div[2]/div/div[5]/div/div[5]/div/di'
+                            'v/div/form/fieldset/div/div/ul/li/label/span[2]/'
+                            'span/span[3]')
+
+        # Get the departing price
+        returnPrices = self.browser.find_element_by_xpath(returnPricesPath) 
+
+        # Filter price
+        returnPrices = str(returnPrices.text).replace('$', '').split() 
+
+        # Set departing price
+        self.returnPrice = returnPrices[1]
+
         # Click continue
-        continueButtonXPath = '/html/body/div[5]/div/div/div/div/div/div/div/div/div[1]/div/div[2]/div/div[6]/div[3]/button'
+        continueButtonXPath = ('/html/body/div[5]/div/div/div/div/div/div/div'
+                               '/div/div[1]/div/div[2]/div/div[6]/div[3]/'
+                               'button')
+
+        # Click Continue *Clicking continue until while as the paths are different 
+        # and the animations load at different times
         continueButton = self.browser.find_element_by_xpath(continueButtonXPath).click()
 
-        sleep(10)
+        # Let animations/page load
+        sleep(6)
         
-
+        # Click continue
         continueButtonClass = 'continue'
         continueButton = self.browser.find_element_by_class_name(continueButtonClass)
 
+        # Let animations/page load
         sleep(5)
+  
+        # A string to check if we are on the traveler's portion of the form 
+        travelerPageCheck = 'allegiant_traveller_form' 
 
-        while not self.browser.find_elements_by_class_name('allegiant_traveller_form'):
+        # Continue to click through the form until we hit the traveler's form
+        # This is allowed as the challenge specifications allow for ANY 
+        # packages
+        while not self.browser.find_elements_by_class_name(travelerPageCheck):
+            # Let animations/page load
             sleep(4)    
+
+            # Select button 
+            # Refresh as the CSS selector may not be valid. This also doubles as a check
+            # to ensure that the script is clicking on the correct button
             continueButton = self.browser.find_element_by_class_name(continueButtonClass)
             
+            # Let animations/page load
             sleep(1)
             continueButton.click()
 
+            # Let animations/page load
             sleep(1)
        
-        print('at trevleres')
-        
-            
+        # Extract the prices from the traveler's page
 
+        # Get the XPath to the table
+        pricesXPath = '//*[@id="pricing"]/div/table/tbody[1]/tr' 
+
+        # Find the elements in the table and store by the 'td' selector
+        pricesAndDiscounts = self.browser.find_elements_by_css_selector('td') 
+        
+        # Filter subsequent list. First turns the elements inside the list 
+        # into a string then takes out any dollar sign($) characters 
+        # Lastly, deletes the last element as it is empty
+        pricesAndDiscounts = [str(price.text).replace('$', '') for price in pricesAndDiscounts]
+        pricesAndDiscounts.pop() 
+
+        # Turn all values in the charges into float values
+        charges = [float(prices) for prices in pricesAndDiscounts]
+        
+        # Sets the final price and prices from the filtered list
+        self.finalPrice = charges.pop()
+        self.prices = charges
+
+        # Navigating printing done
+        print("Navigation done!")
+
+        # Return the charges after the function call
+        return(charges)
+
+    """
+    After the assertions, close the browser and kill the browser process
+    """
     def terminate(self):
         """
         Closes the browser after successful completion and quits the browser.
         """
         self.browser.close()
         self.browser.quit()
-
-
-
 
