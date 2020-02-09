@@ -2,7 +2,7 @@ from CheckPrice import CheckPrice
 
 
 def main():
-    print("Hello World")
+    print("Starting Allegiant Air Automation\n")
 
     myCheckPrice = CheckPrice()
     myCheckPrice.submitTravelForm()
