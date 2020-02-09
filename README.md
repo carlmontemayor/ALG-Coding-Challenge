@@ -5,9 +5,9 @@ one Allegiant flight (round-trip) is equal to the price of all selected items.
 
 Included is also small unittests to ensure that the program works correctly.
 
-The CheckPrice class included has functionality that tests and checks 2 conditions:
-    (1) The prices of selected items from the "Flights" page is equal to the price 
-        shown on the "Travelers" page.
+The CheckPrice class included has functionality that tests and checks 2 conditions: \ 
+    (1) The prices of selected items from the "Flights" page is equal to the price   
+        shown on the "Travelers" page.  \
     (2) The prices of selected items shown on the "Travel" page is equal to the 
         final price shown.
 
@@ -24,7 +24,7 @@ summation of both of the prices with the final price highlighted green.
 
 Install the module by cloning the repository:
 ```
-git@github.com:carlmontemayor/AllegaintCodingChallenge.git
+git clone git@github.com:carlmontemayor/AllegaintCodingChallenge.git
 ```
 
 Before using this module, Selenium must also be installed. It can be installed using pip:
