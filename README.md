@@ -76,13 +76,14 @@ The actual assertion statement that is made is within the checkData() function. 
 are there for me to test and make sure that the functions within the CheckPrice class are actually
 ran successfully.
 
-## Possible errors
 Although my program runs and it works from the assertions and actually running the program itself, I cannot control
 how fast the the HTML/CSS elements are actually rendered on the page. As a result, multiple runs of the program and 
 unittests will help as the speeds in which to wait for the rendering of elements may vary.
 
+From my own testing and running of the unittests and actual application, the functionality is completely present and working.
+
 The possible errors that may occur include the following:\
-(1)Some of the elements are not clickable because they have not been 
+(1) Some of the elements are not clickable because they have not been 
 rendered yet by the DOM\
 (2) For a similar reason, the pop-up footer that lets the user accept cookies may also not be rendered in time
 because it looks like (looking through the Chrome DevTools) that there is a Javascript snippet that prevents the 
