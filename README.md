@@ -15,8 +15,8 @@ The distinction between the 2 above assertions is made as I had extracted the pr
 from both the "Flights" page and the "Travelers" page. As I wanted to ensure that 
 the prices were complete for both pages.
 
-In the screencap below, I extracted prices that are highlighted red for the prices on 
-the "Flights" page and blue for the prices in the "Travelers" page. I checked the 
+In the screencap below, I extracted prices that are highlighted yellow for the prices on 
+the "Flights" page and red for the prices in the "Travelers" page. I checked the 
 summation of both of the prices with the final price highlighted green. 
    
 
