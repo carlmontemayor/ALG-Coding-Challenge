@@ -323,6 +323,7 @@ class CheckPrice():
       # Conduct assertion (1)
       try:
           assert self.departPrice + self.returnPrice == self.finalPrice, 'Assertion failed, price from Flights do not match'
+          print("Prices Match on the Flights Page!")
       except:
           raise Exception("final price does not equal return and depart flights")
 
@@ -331,9 +332,11 @@ class CheckPrice():
       try:
           flightTotal = sum(self.prices)
           assert flightTotal == self.finalPrice, 'Assertion failed, price from Traveler\'s page do not match'
+          print("Prices match on the Travelers Page!")
       except:
           raise Exception("final price does not equal return and depart flights")
 
+      
 
       return True
 
