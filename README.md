@@ -58,6 +58,8 @@ typing:
 python -m unittest discover
 ```
 
+Once finished, there is a unittesting.log file that can be opened to check functionality.
+
 ## Technology Used
 Languages: Python
 Frameworks: unittest (from Python) and Selenium
