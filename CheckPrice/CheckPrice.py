@@ -2,11 +2,15 @@
 # Coding Challenge
 # 
 # This module is used to check the assertions after making an Allegiant 
-# booking. 
-
-# TODO
-# - Include logging
-# - mistake in asserting, look 
+# flight booking. The functions located in the class CheckPrice are ran
+# in the __main__.py file.
+# 
+# The CheckPrice object/class runs a script that navigates to the 
+# Allegiant Air travel page after making a flight with departing
+# and returning dates at a random location and after filling out 
+# the forms and continuing, it tests using an assertion 
+# whether or not the prices displayed are correct with the final 
+# price on the Travelers page.
 
 # Import Selenium Webdriver modules
 from selenium import webdriver
@@ -27,9 +31,9 @@ class CheckPrice():
     """
     Initialize class variables such as the browser and prices
     """
-    def __init__(self):
+    def __init__(self, ops = None):
         # Create and initialize Chrome browser
-        self.browser = webdriver.Chrome()
+        self.browser = webdriver.Chrome(chrome_options = ops)
 
         # Head to Allegiant Air web page
         self.browser.get(ALLEGIANT_URL)
@@ -65,6 +69,10 @@ class CheckPrice():
         Navigate through any random city, city pairing 
         and get to the Traveler's page.
         """  
+        
+        # Let animations/page load
+        sleep(1)
+
         # Print notification submitting form
         print("Submitting form...")
 
@@ -78,7 +86,7 @@ class CheckPrice():
                  '-header.ui-corner-all.ui-helper-clearfix.ui-draggable-hand'
                  'le > button > span.ui-button-icon-primary.ui-icon.ui-icon-'
                  'closethick')
-        
+
         # Select pop-up and close using 'x'
         self.browser.find_element_by_css_selector(popUp).click()
 
@@ -186,7 +194,6 @@ class CheckPrice():
         After filling in destination/return forms, complete
         navigate to the Travelers form and check the price.
         """
-      
         # Print navigation notification
         print("Navigating through traveler's")
 
@@ -194,7 +201,7 @@ class CheckPrice():
         sleep(5)
 
         # Delete cookies pop-up
-        privacyXPath = '/html/body/section/span'
+        privacyXPath = '//*[@id="privacy-policy-footer-close"]'
         privacyPathButton = self.browser.find_element_by_xpath(privacyXPath).click()
 
         # Let animations/page load
@@ -211,9 +218,11 @@ class CheckPrice():
 
         # Filter price
         departPrices = str(departPrices.text).replace('$', '').split() 
+        departPrices = departPrices[1]
+        departPrices = float(departPrices)
 
         # Set departing price
-        self.departPrice = departPrices[1]
+        self.departPrice = departPrices 
 
         # Locate returning flight price
         returnPricesPath = ('/html/body/div[5]/div/div/div/div/div/div/div/di'
@@ -225,10 +234,11 @@ class CheckPrice():
         returnPrices = self.browser.find_element_by_xpath(returnPricesPath) 
 
         # Filter price
-        returnPrices = str(returnPrices.text).replace('$', '').split() 
+        returnPrices = str(returnPrices.text).replace('$', '').split()[1] 
+        returnPrices = float(returnPrices) 
 
         # Set departing price
-        self.returnPrice = returnPrices[1]
+        self.returnPrice = returnPrices
 
         # Click continue
         continueButtonXPath = ('/html/body/div[5]/div/div/div/div/div/div/div'
@@ -299,12 +309,50 @@ class CheckPrice():
         return(charges)
 
     """
+    Conducts two assertions:
+      (1) Check if extracted price values from 'Select Flights' page aligns with 
+          final price (the check that is shown on the Coding Challenge page)
+      (2) Check if extracted price values from the 'Travelers' page is aligns
+          with the final price on the 'Travelers' page
+    """
+    def checkData(self):
+      """
+      Takes the browser instance as a parameter and returns a True if the 
+      assertions are correct
+      """
+      # Conduct assertion (1)
+      try:
+          assert self.departPrice + self.returnPrice == self.finalPrice, 'Assertion failed, price from Flights do not match'
+      except:
+          raise Exception("final price does not equal return and depart flights")
+
+
+      # Conduct assertion (2)
+      try:
+          flightTotal = sum(self.prices)
+          assert flightTotal == self.finalPrice, 'Assertion failed, price from Traveler\'s page do not match'
+      except:
+          raise Exception("final price does not equal return and depart flights")
+
+
+      return True
+
+    """
     After the assertions, close the browser and kill the browser process
     """
     def terminate(self):
         """
         Closes the browser after successful completion and quits the browser.
         """
+        # Termination message
+        print("\nTerminating browser...")
+
+        # Terminates the browsers after test
         self.browser.close()
         self.browser.quit()
+
+        # Terminated message
+        print("Browser terminated.")
+
+        return True
 
