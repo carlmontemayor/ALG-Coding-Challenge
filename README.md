@@ -20,7 +20,7 @@ the "Flights" page and red for the prices in the "Travelers" page. I checked the
 summation of both of the prices with the final price highlighted green. 
 
 Assertion (1)
-![Image of Yaktocat](https://octodex.github.com/images/yaktocat.png)
+![Image of Yaktocat](https://github.com/carlmontemayor/AllegaintCodingChallenge/blob/master/screenshots%20(referenced%20in%20README.md)/Flights%20Page.png)
 
 Assertion (2)
 ![alt text][Travelers Page]
