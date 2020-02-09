@@ -1,107 +1,110 @@
-2020-02-09 09:31:38,610 POST http://127.0.0.1:65249/session {"capabilities": {"alwaysMatch": {"goog:chromeOptions": {"args": ["--headless"], "extensions": []}, "browserName": "chrome", "platformName": "any"}, "firstMatch": [{}]}, "desiredCapabilities": {"goog:chromeOptions": {"args": ["--headless"], "extensions": []}, "platform": "ANY", "browserName": "chrome", "version": ""}}
-2020-02-09 09:31:38,612 Starting new HTTP connection (1): 127.0.0.1:65249
-2020-02-09 09:31:38,936 http://127.0.0.1:65249 "POST /session HTTP/1.1" 200 688
-2020-02-09 09:31:38,936 Finished Request
-2020-02-09 09:31:38,936 POST http://127.0.0.1:65249/session/a2cd6647d1c8521b95a91b208c483f77/url {"url": "https://www.allegiantair.com/"}
-2020-02-09 09:31:42,329 http://127.0.0.1:65249 "POST /session/a2cd6647d1c8521b95a91b208c483f77/url HTTP/1.1" 200 14
-2020-02-09 09:31:42,329 Finished Request
-2020-02-09 09:31:42,329 GET http://127.0.0.1:65249/session/a2cd6647d1c8521b95a91b208c483f77/url {}
-2020-02-09 09:31:42,334 http://127.0.0.1:65249 "GET /session/a2cd6647d1c8521b95a91b208c483f77/url HTTP/1.1" 200 41
-2020-02-09 09:31:42,334 Finished Request
-2020-02-09 09:31:42,334 CheckPrice instantiated. Automation started
-2020-02-09 09:31:43,349 POST http://127.0.0.1:65315/session {"capabilities": {"alwaysMatch": {"goog:chromeOptions": {"args": ["--headless"], "extensions": []}, "browserName": "chrome", "platformName": "any"}, "firstMatch": [{}]}, "desiredCapabilities": {"goog:chromeOptions": {"args": ["--headless"], "extensions": []}, "platform": "ANY", "browserName": "chrome", "version": ""}}
-2020-02-09 09:31:43,350 Starting new HTTP connection (1): 127.0.0.1:65315
-2020-02-09 09:31:43,598 http://127.0.0.1:65315 "POST /session HTTP/1.1" 200 688
-2020-02-09 09:31:43,598 Finished Request
-2020-02-09 09:31:43,598 POST http://127.0.0.1:65315/session/8a26fce12171ed81c764c47fc04a60b1/url {"url": "https://www.allegiantair.com/"}
-2020-02-09 09:31:46,589 http://127.0.0.1:65315 "POST /session/8a26fce12171ed81c764c47fc04a60b1/url HTTP/1.1" 200 14
-2020-02-09 09:31:46,589 Finished Request
-2020-02-09 09:31:46,589 GET http://127.0.0.1:65315/session/8a26fce12171ed81c764c47fc04a60b1/url {}
-2020-02-09 09:31:46,594 http://127.0.0.1:65315 "GET /session/8a26fce12171ed81c764c47fc04a60b1/url HTTP/1.1" 200 41
-2020-02-09 09:31:46,594 Finished Request
-2020-02-09 09:31:46,594 CheckPrice instantiated. Automation started
-2020-02-09 09:31:46,594 Error with connection to https://www.allegiantair.com/
-2020-02-09 09:31:47,609 POST http://127.0.0.1:65373/session {"capabilities": {"alwaysMatch": {"goog:chromeOptions": {"args": ["--headless"], "extensions": []}, "browserName": "chrome", "platformName": "any"}, "firstMatch": [{}]}, "desiredCapabilities": {"goog:chromeOptions": {"args": ["--headless"], "extensions": []}, "platform": "ANY", "browserName": "chrome", "version": ""}}
-2020-02-09 09:31:47,609 Starting new HTTP connection (1): 127.0.0.1:65373
-2020-02-09 09:31:47,871 http://127.0.0.1:65373 "POST /session HTTP/1.1" 200 688
-2020-02-09 09:31:47,871 Finished Request
-2020-02-09 09:31:47,871 POST http://127.0.0.1:65373/session/df286c530e8ea5dd92ad01812a14fa6a/url {"url": "https://www.allegiantair.com/"}
-2020-02-09 09:31:51,054 http://127.0.0.1:65373 "POST /session/df286c530e8ea5dd92ad01812a14fa6a/url HTTP/1.1" 200 14
-2020-02-09 09:31:51,055 Finished Request
-2020-02-09 09:31:51,055 GET http://127.0.0.1:65373/session/df286c530e8ea5dd92ad01812a14fa6a/url {}
-2020-02-09 09:31:51,059 http://127.0.0.1:65373 "GET /session/df286c530e8ea5dd92ad01812a14fa6a/url HTTP/1.1" 200 41
-2020-02-09 09:31:51,060 Finished Request
-2020-02-09 09:31:51,060 CheckPrice instantiated. Automation started
-2020-02-09 09:31:53,062 POST http://127.0.0.1:65373/session/df286c530e8ea5dd92ad01812a14fa6a/element {"using": "css selector", "value": "body > div.ui-dialog.ui-widget.ui-widget-content.ui-corner-all.ui-front.credit-card-overlay-wrapper.dialog-drupal.ui-draggable.ui-resizable > div.ui-dialog-titlebar.ui-widget-header.ui-corner-all.ui-helper-clearfix.ui-draggable-handle > button > span.ui-button-icon-primary.ui-icon.ui-icon-closethick"}
-2020-02-09 09:31:53,072 http://127.0.0.1:65373 "POST /session/df286c530e8ea5dd92ad01812a14fa6a/element HTTP/1.1" 200 88
-2020-02-09 09:31:53,073 Finished Request
-2020-02-09 09:31:53,073 POST http://127.0.0.1:65373/session/df286c530e8ea5dd92ad01812a14fa6a/element/6bcadee0-7904-4283-af2e-28cc69ca7479/click {"id": "6bcadee0-7904-4283-af2e-28cc69ca7479"}
-2020-02-09 09:31:53,130 http://127.0.0.1:65373 "POST /session/df286c530e8ea5dd92ad01812a14fa6a/element/6bcadee0-7904-4283-af2e-28cc69ca7479/click HTTP/1.1" 200 14
-2020-02-09 09:31:53,130 Finished Request
-2020-02-09 09:31:54,132 POST http://127.0.0.1:65373/session/df286c530e8ea5dd92ad01812a14fa6a/element {"using": "xpath", "value": "/html/body/div[5]/div/div/div[1]/div[1]/div/div[2]/div[1]/div/div/div[1]/form/div/div[1]/div[1]/div[1]/div/div/div[1]/div/input"}
-2020-02-09 09:31:54,143 http://127.0.0.1:65373 "POST /session/df286c530e8ea5dd92ad01812a14fa6a/element HTTP/1.1" 200 88
-2020-02-09 09:31:54,143 Finished Request
-2020-02-09 09:31:54,143 POST http://127.0.0.1:65373/session/df286c530e8ea5dd92ad01812a14fa6a/element/4ced776b-c8f8-4ea2-a823-0fa81199fa16/click {"id": "4ced776b-c8f8-4ea2-a823-0fa81199fa16"}
-2020-02-09 09:31:54,205 http://127.0.0.1:65373 "POST /session/df286c530e8ea5dd92ad01812a14fa6a/element/4ced776b-c8f8-4ea2-a823-0fa81199fa16/click HTTP/1.1" 200 14
-2020-02-09 09:31:54,205 Finished Request
-2020-02-09 09:31:54,205 POST http://127.0.0.1:65373/session/df286c530e8ea5dd92ad01812a14fa6a/actions {"actions": [{"parameters": {"pointerType": "mouse"}, "type": "pointer", "id": "mouse", "actions": [{"duration": 0, "type": "pause"}, {"duration": 0, "type": "pause"}, {"duration": 0, "type": "pause"}, {"duration": 0, "type": "pause"}]}, {"type": "key", "id": "key", "actions": [{"type": "keyDown", "value": "\ue015"}, {"type": "keyUp", "value": "\ue015"}, {"type": "keyDown", "value": "\ue007"}, {"type": "keyUp", "value": "\ue007"}]}]}
-2020-02-09 09:31:54,239 http://127.0.0.1:65373 "POST /session/df286c530e8ea5dd92ad01812a14fa6a/actions HTTP/1.1" 200 14
-2020-02-09 09:31:54,239 Finished Request
-2020-02-09 09:31:55,242 POST http://127.0.0.1:65373/session/df286c530e8ea5dd92ad01812a14fa6a/element {"using": "xpath", "value": "/html/body/div[5]/div/div/div[1]/div[1]/div/div[2]/div[1]/div/div/div[1]/form/div/div[1]/div[1]/div[2]/div/div/div[1]/div/input"}
-2020-02-09 09:31:55,253 http://127.0.0.1:65373 "POST /session/df286c530e8ea5dd92ad01812a14fa6a/element HTTP/1.1" 200 88
-2020-02-09 09:31:55,254 Finished Request
-2020-02-09 09:31:55,254 POST http://127.0.0.1:65373/session/df286c530e8ea5dd92ad01812a14fa6a/element/776770ae-5562-4dd2-aee7-253dc7a72a5d/click {"id": "776770ae-5562-4dd2-aee7-253dc7a72a5d"}
-2020-02-09 09:31:55,298 http://127.0.0.1:65373 "POST /session/df286c530e8ea5dd92ad01812a14fa6a/element/776770ae-5562-4dd2-aee7-253dc7a72a5d/click HTTP/1.1" 200 14
-2020-02-09 09:31:55,298 Finished Request
-2020-02-09 09:31:55,299 POST http://127.0.0.1:65373/session/df286c530e8ea5dd92ad01812a14fa6a/actions {"actions": [{"parameters": {"pointerType": "mouse"}, "type": "pointer", "id": "mouse", "actions": [{"duration": 0, "type": "pause"}, {"duration": 0, "type": "pause"}, {"duration": 0, "type": "pause"}, {"duration": 0, "type": "pause"}, {"duration": 0, "type": "pause"}, {"duration": 0, "type": "pause"}]}, {"type": "key", "id": "key", "actions": [{"type": "keyDown", "value": "\ue015"}, {"type": "keyUp", "value": "\ue015"}, {"type": "keyDown", "value": "\ue015"}, {"type": "keyUp", "value": "\ue015"}, {"type": "keyDown", "value": "\ue007"}, {"type": "keyUp", "value": "\ue007"}]}]}
-2020-02-09 09:31:55,334 http://127.0.0.1:65373 "POST /session/df286c530e8ea5dd92ad01812a14fa6a/actions HTTP/1.1" 200 14
-2020-02-09 09:31:55,335 Finished Request
-2020-02-09 09:31:56,340 POST http://127.0.0.1:65373/session/df286c530e8ea5dd92ad01812a14fa6a/element {"using": "css selector", "value": ".datepicker-toggle"}
-2020-02-09 09:31:56,351 http://127.0.0.1:65373 "POST /session/df286c530e8ea5dd92ad01812a14fa6a/element HTTP/1.1" 200 88
-2020-02-09 09:31:56,352 Finished Request
-2020-02-09 09:31:56,352 POST http://127.0.0.1:65373/session/df286c530e8ea5dd92ad01812a14fa6a/element/9cd081dc-4f9e-4563-aa6a-ad9f2e6cd9d3/click {"id": "9cd081dc-4f9e-4563-aa6a-ad9f2e6cd9d3"}
-2020-02-09 09:31:56,426 http://127.0.0.1:65373 "POST /session/df286c530e8ea5dd92ad01812a14fa6a/element/9cd081dc-4f9e-4563-aa6a-ad9f2e6cd9d3/click HTTP/1.1" 200 14
-2020-02-09 09:31:56,426 Finished Request
-2020-02-09 09:31:57,432 POST http://127.0.0.1:65373/session/df286c530e8ea5dd92ad01812a14fa6a/element {"using": "xpath", "value": "/html/body/div[5]/div/div/div[1]/div[1]/div/div[2]/div[1]/div/div/div[1]/form/div/div[1]/div[2]/div[1]/div/div/div/div[2]/table/tbody/tr[5]/td[2]/a"}
-2020-02-09 09:31:57,444 http://127.0.0.1:65373 "POST /session/df286c530e8ea5dd92ad01812a14fa6a/element HTTP/1.1" 200 88
-2020-02-09 09:31:57,444 Finished Request
-2020-02-09 09:31:57,444 POST http://127.0.0.1:65373/session/df286c530e8ea5dd92ad01812a14fa6a/element/b91da9df-a567-4248-ac23-70e8bd02872d/click {"id": "b91da9df-a567-4248-ac23-70e8bd02872d"}
-2020-02-09 09:31:57,496 http://127.0.0.1:65373 "POST /session/df286c530e8ea5dd92ad01812a14fa6a/element/b91da9df-a567-4248-ac23-70e8bd02872d/click HTTP/1.1" 200 14
-2020-02-09 09:31:57,497 Finished Request
-2020-02-09 09:31:58,502 POST http://127.0.0.1:65373/session/df286c530e8ea5dd92ad01812a14fa6a/element {"using": "xpath", "value": "/html/body/div[5]/div/div/div[1]/div[1]/div/div[2]/div[1]/div/div/div[1]/form/div/div[1]/div[2]/div[2]/div/div/div/button"}
-2020-02-09 09:31:58,514 http://127.0.0.1:65373 "POST /session/df286c530e8ea5dd92ad01812a14fa6a/element HTTP/1.1" 200 88
-2020-02-09 09:31:58,514 Finished Request
-2020-02-09 09:31:58,515 POST http://127.0.0.1:65373/session/df286c530e8ea5dd92ad01812a14fa6a/element/f29f4857-d85f-412f-89a8-4b66b909ce4e/click {"id": "f29f4857-d85f-412f-89a8-4b66b909ce4e"}
-2020-02-09 09:31:58,574 http://127.0.0.1:65373 "POST /session/df286c530e8ea5dd92ad01812a14fa6a/element/f29f4857-d85f-412f-89a8-4b66b909ce4e/click HTTP/1.1" 200 14
-2020-02-09 09:31:58,574 Finished Request
-2020-02-09 09:31:59,576 POST http://127.0.0.1:65373/session/df286c530e8ea5dd92ad01812a14fa6a/element {"using": "xpath", "value": "/html/body/div[5]/div/div/div[1]/div[1]/div/div[2]/div[1]/div/div/div[1]/form/div/div[1]/div[2]/div[2]/div/div/div/div[2]/table/tbody/tr[5]/td[6]/a"}
-2020-02-09 09:31:59,588 http://127.0.0.1:65373 "POST /session/df286c530e8ea5dd92ad01812a14fa6a/element HTTP/1.1" 200 88
-2020-02-09 09:31:59,588 Finished Request
-2020-02-09 09:31:59,588 POST http://127.0.0.1:65373/session/df286c530e8ea5dd92ad01812a14fa6a/element/68bad440-cd75-4d99-b49f-23b6ff8dd19a/click {"id": "68bad440-cd75-4d99-b49f-23b6ff8dd19a"}
-2020-02-09 09:31:59,653 http://127.0.0.1:65373 "POST /session/df286c530e8ea5dd92ad01812a14fa6a/element/68bad440-cd75-4d99-b49f-23b6ff8dd19a/click HTTP/1.1" 200 14
-2020-02-09 09:31:59,654 Finished Request
-2020-02-09 09:32:00,659 POST http://127.0.0.1:65373/session/df286c530e8ea5dd92ad01812a14fa6a/element {"using": "xpath", "value": "/html/body/div[5]/div/div/div[1]/div[1]/div/div[2]/div[1]/div/div/div[1]/form/div/div[1]/div[4]/div/button"}
-2020-02-09 09:32:00,671 http://127.0.0.1:65373 "POST /session/df286c530e8ea5dd92ad01812a14fa6a/element HTTP/1.1" 200 88
-2020-02-09 09:32:00,671 Finished Request
-2020-02-09 09:32:00,672 POST http://127.0.0.1:65373/session/df286c530e8ea5dd92ad01812a14fa6a/element/67634c48-c8c9-4d33-a639-18063f802ac4/click {"id": "67634c48-c8c9-4d33-a639-18063f802ac4"}
-2020-02-09 09:32:00,732 http://127.0.0.1:65373 "POST /session/df286c530e8ea5dd92ad01812a14fa6a/element/67634c48-c8c9-4d33-a639-18063f802ac4/click HTTP/1.1" 200 14
-2020-02-09 09:32:00,732 Finished Request
-2020-02-09 09:32:00,732 Depart/Return flights submitted.
-2020-02-09 09:32:01,747 POST http://127.0.0.1:65474/session {"capabilities": {"alwaysMatch": {"goog:chromeOptions": {"args": ["--headless"], "extensions": []}, "browserName": "chrome", "platformName": "any"}, "firstMatch": [{}]}, "desiredCapabilities": {"goog:chromeOptions": {"args": ["--headless"], "extensions": []}, "platform": "ANY", "browserName": "chrome", "version": ""}}
-2020-02-09 09:32:01,748 Starting new HTTP connection (1): 127.0.0.1:65474
-2020-02-09 09:32:02,019 http://127.0.0.1:65474 "POST /session HTTP/1.1" 200 688
-2020-02-09 09:32:02,022 Finished Request
-2020-02-09 09:32:02,022 POST http://127.0.0.1:65474/session/3174c64d8a89689e54e45839ab4e45de/url {"url": "https://www.allegiantair.com/"}
-2020-02-09 09:32:03,377 http://127.0.0.1:65474 "POST /session/3174c64d8a89689e54e45839ab4e45de/url HTTP/1.1" 200 14
-2020-02-09 09:32:03,378 Finished Request
-2020-02-09 09:32:03,378 GET http://127.0.0.1:65474/session/3174c64d8a89689e54e45839ab4e45de/url {}
-2020-02-09 09:32:03,385 http://127.0.0.1:65474 "GET /session/3174c64d8a89689e54e45839ab4e45de/url HTTP/1.1" 200 41
-2020-02-09 09:32:03,385 Finished Request
-2020-02-09 09:32:03,385 CheckPrice instantiated. Automation started
-2020-02-09 09:32:03,385 DELETE http://127.0.0.1:65474/session/3174c64d8a89689e54e45839ab4e45de/window {}
-2020-02-09 09:32:03,492 http://127.0.0.1:65474 "DELETE /session/3174c64d8a89689e54e45839ab4e45de/window HTTP/1.1" 200 12
-2020-02-09 09:32:03,493 Finished Request
-2020-02-09 09:32:03,493 DELETE http://127.0.0.1:65474/session/3174c64d8a89689e54e45839ab4e45de {}
-2020-02-09 09:32:03,505 http://127.0.0.1:65474 "DELETE /session/3174c64d8a89689e54e45839ab4e45de HTTP/1.1" 200 14
-2020-02-09 09:32:03,505 Finished Request
-2020-02-09 09:32:03,518 Browser closed safely
+2020-02-09 09:49:11,873 POST http://127.0.0.1:53477/session {"capabilities": {"alwaysMatch": {"goog:chromeOptions": {"args": ["--headless"], "extensions": []}, "browserName": "chrome", "platformName": "any"}, "firstMatch": [{}]}, "desiredCapabilities": {"goog:chromeOptions": {"args": ["--headless"], "extensions": []}, "platform": "ANY", "browserName": "chrome", "version": ""}}
+2020-02-09 09:49:11,877 Starting new HTTP connection (1): 127.0.0.1:53477
+2020-02-09 09:49:12,202 http://127.0.0.1:53477 "POST /session HTTP/1.1" 200 688
+2020-02-09 09:49:12,203 Finished Request
+2020-02-09 09:49:12,203 POST http://127.0.0.1:53477/session/acee3ecf5516c39723a27304e67e3175/url {"url": "https://www.allegiantair.com/"}
+2020-02-09 09:49:15,874 http://127.0.0.1:53477 "POST /session/acee3ecf5516c39723a27304e67e3175/url HTTP/1.1" 200 14
+2020-02-09 09:49:15,875 Finished Request
+2020-02-09 09:49:15,875 GET http://127.0.0.1:53477/session/acee3ecf5516c39723a27304e67e3175/url {}
+2020-02-09 09:49:15,879 http://127.0.0.1:53477 "GET /session/acee3ecf5516c39723a27304e67e3175/url HTTP/1.1" 200 41
+2020-02-09 09:49:15,880 Finished Request
+2020-02-09 09:49:15,880 CheckPrice instantiated. Automation started
+2020-02-09 09:49:15,880 Price checking completed
+2020-02-09 09:49:15,880 Assertion (1) did not pass
+2020-02-09 09:49:15,880 Assertion (2) did not pass
+2020-02-09 09:49:16,892 POST http://127.0.0.1:53546/session {"capabilities": {"alwaysMatch": {"goog:chromeOptions": {"args": ["--headless"], "extensions": []}, "browserName": "chrome", "platformName": "any"}, "firstMatch": [{}]}, "desiredCapabilities": {"goog:chromeOptions": {"args": ["--headless"], "extensions": []}, "platform": "ANY", "browserName": "chrome", "version": ""}}
+2020-02-09 09:49:16,893 Starting new HTTP connection (1): 127.0.0.1:53546
+2020-02-09 09:49:17,144 http://127.0.0.1:53546 "POST /session HTTP/1.1" 200 688
+2020-02-09 09:49:17,144 Finished Request
+2020-02-09 09:49:17,144 POST http://127.0.0.1:53546/session/fdb79157747d28d266585151bf87ffcb/url {"url": "https://www.allegiantair.com/"}
+2020-02-09 09:49:19,994 http://127.0.0.1:53546 "POST /session/fdb79157747d28d266585151bf87ffcb/url HTTP/1.1" 200 14
+2020-02-09 09:49:19,995 Finished Request
+2020-02-09 09:49:19,995 GET http://127.0.0.1:53546/session/fdb79157747d28d266585151bf87ffcb/url {}
+2020-02-09 09:49:19,999 http://127.0.0.1:53546 "GET /session/fdb79157747d28d266585151bf87ffcb/url HTTP/1.1" 200 41
+2020-02-09 09:49:20,000 Finished Request
+2020-02-09 09:49:20,000 CheckPrice instantiated. Automation started
+2020-02-09 09:49:20,000 Connected. Established connection with https://www.allegiantair.com/
+2020-02-09 09:49:21,015 POST http://127.0.0.1:53604/session {"capabilities": {"alwaysMatch": {"goog:chromeOptions": {"args": ["--headless"], "extensions": []}, "browserName": "chrome", "platformName": "any"}, "firstMatch": [{}]}, "desiredCapabilities": {"goog:chromeOptions": {"args": ["--headless"], "extensions": []}, "platform": "ANY", "browserName": "chrome", "version": ""}}
+2020-02-09 09:49:21,015 Starting new HTTP connection (1): 127.0.0.1:53604
+2020-02-09 09:49:21,267 http://127.0.0.1:53604 "POST /session HTTP/1.1" 200 688
+2020-02-09 09:49:21,267 Finished Request
+2020-02-09 09:49:21,267 POST http://127.0.0.1:53604/session/e65b3b37331dddbe91e269ab6d4bcb4a/url {"url": "https://www.allegiantair.com/"}
+2020-02-09 09:49:24,179 http://127.0.0.1:53604 "POST /session/e65b3b37331dddbe91e269ab6d4bcb4a/url HTTP/1.1" 200 14
+2020-02-09 09:49:24,179 Finished Request
+2020-02-09 09:49:24,179 GET http://127.0.0.1:53604/session/e65b3b37331dddbe91e269ab6d4bcb4a/url {}
+2020-02-09 09:49:24,184 http://127.0.0.1:53604 "GET /session/e65b3b37331dddbe91e269ab6d4bcb4a/url HTTP/1.1" 200 41
+2020-02-09 09:49:24,184 Finished Request
+2020-02-09 09:49:24,185 CheckPrice instantiated. Automation started
+2020-02-09 09:49:26,196 POST http://127.0.0.1:53604/session/e65b3b37331dddbe91e269ab6d4bcb4a/element {"using": "css selector", "value": "body > div.ui-dialog.ui-widget.ui-widget-content.ui-corner-all.ui-front.credit-card-overlay-wrapper.dialog-drupal.ui-draggable.ui-resizable > div.ui-dialog-titlebar.ui-widget-header.ui-corner-all.ui-helper-clearfix.ui-draggable-handle > button > span.ui-button-icon-primary.ui-icon.ui-icon-closethick"}
+2020-02-09 09:49:26,208 http://127.0.0.1:53604 "POST /session/e65b3b37331dddbe91e269ab6d4bcb4a/element HTTP/1.1" 200 88
+2020-02-09 09:49:26,208 Finished Request
+2020-02-09 09:49:26,208 POST http://127.0.0.1:53604/session/e65b3b37331dddbe91e269ab6d4bcb4a/element/7510ee3d-c457-4985-9932-43744aba96b1/click {"id": "7510ee3d-c457-4985-9932-43744aba96b1"}
+2020-02-09 09:49:26,263 http://127.0.0.1:53604 "POST /session/e65b3b37331dddbe91e269ab6d4bcb4a/element/7510ee3d-c457-4985-9932-43744aba96b1/click HTTP/1.1" 200 14
+2020-02-09 09:49:26,263 Finished Request
+2020-02-09 09:49:27,269 POST http://127.0.0.1:53604/session/e65b3b37331dddbe91e269ab6d4bcb4a/element {"using": "xpath", "value": "/html/body/div[5]/div/div/div[1]/div[1]/div/div[2]/div[1]/div/div/div[1]/form/div/div[1]/div[1]/div[1]/div/div/div[1]/div/input"}
+2020-02-09 09:49:27,280 http://127.0.0.1:53604 "POST /session/e65b3b37331dddbe91e269ab6d4bcb4a/element HTTP/1.1" 200 88
+2020-02-09 09:49:27,281 Finished Request
+2020-02-09 09:49:27,281 POST http://127.0.0.1:53604/session/e65b3b37331dddbe91e269ab6d4bcb4a/element/a51d3893-59c2-421e-b4e5-4afc95ac0c93/click {"id": "a51d3893-59c2-421e-b4e5-4afc95ac0c93"}
+2020-02-09 09:49:27,343 http://127.0.0.1:53604 "POST /session/e65b3b37331dddbe91e269ab6d4bcb4a/element/a51d3893-59c2-421e-b4e5-4afc95ac0c93/click HTTP/1.1" 200 14
+2020-02-09 09:49:27,343 Finished Request
+2020-02-09 09:49:27,343 POST http://127.0.0.1:53604/session/e65b3b37331dddbe91e269ab6d4bcb4a/actions {"actions": [{"parameters": {"pointerType": "mouse"}, "type": "pointer", "id": "mouse", "actions": [{"duration": 0, "type": "pause"}, {"duration": 0, "type": "pause"}, {"duration": 0, "type": "pause"}, {"duration": 0, "type": "pause"}]}, {"type": "key", "id": "key", "actions": [{"type": "keyDown", "value": "\ue015"}, {"type": "keyUp", "value": "\ue015"}, {"type": "keyDown", "value": "\ue007"}, {"type": "keyUp", "value": "\ue007"}]}]}
+2020-02-09 09:49:27,377 http://127.0.0.1:53604 "POST /session/e65b3b37331dddbe91e269ab6d4bcb4a/actions HTTP/1.1" 200 14
+2020-02-09 09:49:27,378 Finished Request
+2020-02-09 09:49:28,382 POST http://127.0.0.1:53604/session/e65b3b37331dddbe91e269ab6d4bcb4a/element {"using": "xpath", "value": "/html/body/div[5]/div/div/div[1]/div[1]/div/div[2]/div[1]/div/div/div[1]/form/div/div[1]/div[1]/div[2]/div/div/div[1]/div/input"}
+2020-02-09 09:49:28,394 http://127.0.0.1:53604 "POST /session/e65b3b37331dddbe91e269ab6d4bcb4a/element HTTP/1.1" 200 88
+2020-02-09 09:49:28,394 Finished Request
+2020-02-09 09:49:28,394 POST http://127.0.0.1:53604/session/e65b3b37331dddbe91e269ab6d4bcb4a/element/8a4357c9-ecd1-4413-9589-7e2914f67b0f/click {"id": "8a4357c9-ecd1-4413-9589-7e2914f67b0f"}
+2020-02-09 09:49:28,438 http://127.0.0.1:53604 "POST /session/e65b3b37331dddbe91e269ab6d4bcb4a/element/8a4357c9-ecd1-4413-9589-7e2914f67b0f/click HTTP/1.1" 200 14
+2020-02-09 09:49:28,438 Finished Request
+2020-02-09 09:49:28,438 POST http://127.0.0.1:53604/session/e65b3b37331dddbe91e269ab6d4bcb4a/actions {"actions": [{"parameters": {"pointerType": "mouse"}, "type": "pointer", "id": "mouse", "actions": [{"duration": 0, "type": "pause"}, {"duration": 0, "type": "pause"}, {"duration": 0, "type": "pause"}, {"duration": 0, "type": "pause"}, {"duration": 0, "type": "pause"}, {"duration": 0, "type": "pause"}]}, {"type": "key", "id": "key", "actions": [{"type": "keyDown", "value": "\ue015"}, {"type": "keyUp", "value": "\ue015"}, {"type": "keyDown", "value": "\ue015"}, {"type": "keyUp", "value": "\ue015"}, {"type": "keyDown", "value": "\ue007"}, {"type": "keyUp", "value": "\ue007"}]}]}
+2020-02-09 09:49:28,474 http://127.0.0.1:53604 "POST /session/e65b3b37331dddbe91e269ab6d4bcb4a/actions HTTP/1.1" 200 14
+2020-02-09 09:49:28,475 Finished Request
+2020-02-09 09:49:29,477 POST http://127.0.0.1:53604/session/e65b3b37331dddbe91e269ab6d4bcb4a/element {"using": "css selector", "value": ".datepicker-toggle"}
+2020-02-09 09:49:29,488 http://127.0.0.1:53604 "POST /session/e65b3b37331dddbe91e269ab6d4bcb4a/element HTTP/1.1" 200 88
+2020-02-09 09:49:29,488 Finished Request
+2020-02-09 09:49:29,488 POST http://127.0.0.1:53604/session/e65b3b37331dddbe91e269ab6d4bcb4a/element/d8587aae-c105-4ce5-a59b-3fdd432e894b/click {"id": "d8587aae-c105-4ce5-a59b-3fdd432e894b"}
+2020-02-09 09:49:29,558 http://127.0.0.1:53604 "POST /session/e65b3b37331dddbe91e269ab6d4bcb4a/element/d8587aae-c105-4ce5-a59b-3fdd432e894b/click HTTP/1.1" 200 14
+2020-02-09 09:49:29,559 Finished Request
+2020-02-09 09:49:30,563 POST http://127.0.0.1:53604/session/e65b3b37331dddbe91e269ab6d4bcb4a/element {"using": "xpath", "value": "/html/body/div[5]/div/div/div[1]/div[1]/div/div[2]/div[1]/div/div/div[1]/form/div/div[1]/div[2]/div[1]/div/div/div/div[2]/table/tbody/tr[5]/td[2]/a"}
+2020-02-09 09:49:30,575 http://127.0.0.1:53604 "POST /session/e65b3b37331dddbe91e269ab6d4bcb4a/element HTTP/1.1" 200 88
+2020-02-09 09:49:30,575 Finished Request
+2020-02-09 09:49:30,575 POST http://127.0.0.1:53604/session/e65b3b37331dddbe91e269ab6d4bcb4a/element/84c1595e-7a8c-40dc-8653-0a585ab2cce1/click {"id": "84c1595e-7a8c-40dc-8653-0a585ab2cce1"}
+2020-02-09 09:49:30,631 http://127.0.0.1:53604 "POST /session/e65b3b37331dddbe91e269ab6d4bcb4a/element/84c1595e-7a8c-40dc-8653-0a585ab2cce1/click HTTP/1.1" 200 14
+2020-02-09 09:49:30,631 Finished Request
+2020-02-09 09:49:31,636 POST http://127.0.0.1:53604/session/e65b3b37331dddbe91e269ab6d4bcb4a/element {"using": "xpath", "value": "/html/body/div[5]/div/div/div[1]/div[1]/div/div[2]/div[1]/div/div/div[1]/form/div/div[1]/div[2]/div[2]/div/div/div/button"}
+2020-02-09 09:49:31,646 http://127.0.0.1:53604 "POST /session/e65b3b37331dddbe91e269ab6d4bcb4a/element HTTP/1.1" 200 88
+2020-02-09 09:49:31,646 Finished Request
+2020-02-09 09:49:31,646 POST http://127.0.0.1:53604/session/e65b3b37331dddbe91e269ab6d4bcb4a/element/187b3c4e-dacb-48f5-b3bf-33e693c8df56/click {"id": "187b3c4e-dacb-48f5-b3bf-33e693c8df56"}
+2020-02-09 09:49:31,708 http://127.0.0.1:53604 "POST /session/e65b3b37331dddbe91e269ab6d4bcb4a/element/187b3c4e-dacb-48f5-b3bf-33e693c8df56/click HTTP/1.1" 200 14
+2020-02-09 09:49:31,708 Finished Request
+2020-02-09 09:49:32,713 POST http://127.0.0.1:53604/session/e65b3b37331dddbe91e269ab6d4bcb4a/element {"using": "xpath", "value": "/html/body/div[5]/div/div/div[1]/div[1]/div/div[2]/div[1]/div/div/div[1]/form/div/div[1]/div[2]/div[2]/div/div/div/div[2]/table/tbody/tr[5]/td[6]/a"}
+2020-02-09 09:49:32,722 http://127.0.0.1:53604 "POST /session/e65b3b37331dddbe91e269ab6d4bcb4a/element HTTP/1.1" 200 88
+2020-02-09 09:49:32,723 Finished Request
+2020-02-09 09:49:32,723 POST http://127.0.0.1:53604/session/e65b3b37331dddbe91e269ab6d4bcb4a/element/edb3968b-a0d6-4c3e-b78b-59dff736451a/click {"id": "edb3968b-a0d6-4c3e-b78b-59dff736451a"}
+2020-02-09 09:49:32,780 http://127.0.0.1:53604 "POST /session/e65b3b37331dddbe91e269ab6d4bcb4a/element/edb3968b-a0d6-4c3e-b78b-59dff736451a/click HTTP/1.1" 200 14
+2020-02-09 09:49:32,781 Finished Request
+2020-02-09 09:49:33,787 POST http://127.0.0.1:53604/session/e65b3b37331dddbe91e269ab6d4bcb4a/element {"using": "xpath", "value": "/html/body/div[5]/div/div/div[1]/div[1]/div/div[2]/div[1]/div/div/div[1]/form/div/div[1]/div[4]/div/button"}
+2020-02-09 09:49:33,797 http://127.0.0.1:53604 "POST /session/e65b3b37331dddbe91e269ab6d4bcb4a/element HTTP/1.1" 200 88
+2020-02-09 09:49:33,797 Finished Request
+2020-02-09 09:49:33,797 POST http://127.0.0.1:53604/session/e65b3b37331dddbe91e269ab6d4bcb4a/element/ae3f119b-ff5d-44ee-a431-ed41f736a423/click {"id": "ae3f119b-ff5d-44ee-a431-ed41f736a423"}
+2020-02-09 09:49:33,858 http://127.0.0.1:53604 "POST /session/e65b3b37331dddbe91e269ab6d4bcb4a/element/ae3f119b-ff5d-44ee-a431-ed41f736a423/click HTTP/1.1" 200 14
+2020-02-09 09:49:33,859 Finished Request
+2020-02-09 09:49:33,859 Depart/Return flights submitted.
+2020-02-09 09:49:34,883 POST http://127.0.0.1:53697/session {"capabilities": {"alwaysMatch": {"goog:chromeOptions": {"args": ["--headless"], "extensions": []}, "browserName": "chrome", "platformName": "any"}, "firstMatch": [{}]}, "desiredCapabilities": {"goog:chromeOptions": {"args": ["--headless"], "extensions": []}, "platform": "ANY", "browserName": "chrome", "version": ""}}
+2020-02-09 09:49:34,883 Starting new HTTP connection (1): 127.0.0.1:53697
+2020-02-09 09:49:35,190 http://127.0.0.1:53697 "POST /session HTTP/1.1" 200 688
+2020-02-09 09:49:35,190 Finished Request
+2020-02-09 09:49:35,190 POST http://127.0.0.1:53697/session/593e1bf52223cb2ff68fb8bb0c8aac60/url {"url": "https://www.allegiantair.com/"}
+2020-02-09 09:49:39,718 http://127.0.0.1:53697 "POST /session/593e1bf52223cb2ff68fb8bb0c8aac60/url HTTP/1.1" 200 14
+2020-02-09 09:49:39,718 Finished Request
+2020-02-09 09:49:39,719 GET http://127.0.0.1:53697/session/593e1bf52223cb2ff68fb8bb0c8aac60/url {}
+2020-02-09 09:49:39,723 http://127.0.0.1:53697 "GET /session/593e1bf52223cb2ff68fb8bb0c8aac60/url HTTP/1.1" 200 41
+2020-02-09 09:49:39,724 Finished Request
+2020-02-09 09:49:39,724 CheckPrice instantiated. Automation started
+2020-02-09 09:49:39,724 DELETE http://127.0.0.1:53697/session/593e1bf52223cb2ff68fb8bb0c8aac60/window {}
+2020-02-09 09:49:39,831 http://127.0.0.1:53697 "DELETE /session/593e1bf52223cb2ff68fb8bb0c8aac60/window HTTP/1.1" 200 12
+2020-02-09 09:49:39,832 Finished Request
+2020-02-09 09:49:39,832 DELETE http://127.0.0.1:53697/session/593e1bf52223cb2ff68fb8bb0c8aac60 {}
+2020-02-09 09:49:39,848 http://127.0.0.1:53697 "DELETE /session/593e1bf52223cb2ff68fb8bb0c8aac60 HTTP/1.1" 200 14
+2020-02-09 09:49:39,848 Finished Request
+2020-02-09 09:49:39,863 Browser closed safely

@@ -51,7 +51,7 @@ class TestCheckPrice(unittest.TestCase):
                          "connection not established: expected value {" 
                          + correctUrl + '} ' + "actual value {" + res + "}") 
 
-        if not res:
+        if res:
             logger.info('Connected. Established connection with ' + correctUrl)
         else:
             logger.warning('Error with connection to ' + correctUrl)
@@ -92,14 +92,24 @@ class TestCheckPrice(unittest.TestCase):
                         + "True" + "} " + "actual value {" + str(res)
                         + "}")
 
+        # Log the confirmation or error
+        if res:
+            logger.info("Price checking completed")
+        else:
+            logger.warning("Price checking not completed")
+
         # Assertion (1)
         sumOfPrices = self.testCheckPrice.departPrice + self.testCheckPrice.returnPrice
         finalCost = self.testCheckPrice.departPrice
 
-        self.assertEqual(sumOfPrices, finalCost,
+        res = self.assertEqual(sumOfPrices, finalCost,
                          "prices not equal: expected value {" +  
                          str(finalCost) + "} actual value {"
                          + str(sumOfPrices))
+
+        if res:
+            logger.info("Assertion (1) Passed")
+        else: logger.warning("Assertion (1) did not pass")
 
         # Assertion (2)
         sumOfCosts = sum(self.testCheckPrice.prices)
@@ -108,9 +118,15 @@ class TestCheckPrice(unittest.TestCase):
                          + "value {" + str(finalCost) + "} actual value {" +
                          str(sumOfCosts))
 
+        if res:
+            logger.info("Assertion (2) Passed")
+        else: logger.warning("Assertion (2) did not pass")
+
         # If exception occurs, test if it is correctly raised
         self.assertRaises(Exception, self.testCheckPrice.checkData(), 
                           str(finalCost))
+
+        
 
     def test_terminate(self):
         """
