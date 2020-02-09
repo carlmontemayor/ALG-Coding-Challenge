@@ -25,10 +25,10 @@ a check to make sure that the prices on the Travelers page is correct.
 The prices with in the yellow boxes AND the prices in the red box both equal to the price shown in 
 the green box.
 
-### Assertion (1)
+### Flights Page 
 ![Flights Page](https://github.com/carlmontemayor/AllegaintCodingChallenge/blob/master/screenshots%20(referenced%20in%20README.md)/Flights%20Page.png)
 
-### Assertion (2)
+### Travelers Page
 ![Travelers Page](https://github.com/carlmontemayor/AllegaintCodingChallenge/blob/master/screenshots%20(referenced%20in%20README.md)/Traveler's%20Page.png)
 
 ## Installation
