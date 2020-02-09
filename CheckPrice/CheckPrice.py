@@ -195,7 +195,7 @@ class CheckPrice():
         navigate to the Travelers form and check the price.
         """
         # Print navigation notification
-        print("Navigating through traveler's")
+        print("Navigating to Travelers...")
 
         # Let animations/page load
         sleep(5)
@@ -303,7 +303,7 @@ class CheckPrice():
         self.prices = charges
 
         # Navigating printing done
-        print("Navigation done!")
+        print("Navigation done!\n")
 
         # Return the charges after the function call
         return(charges)
