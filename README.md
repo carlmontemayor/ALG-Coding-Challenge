@@ -17,15 +17,16 @@ the prices were complete for both pages.
 
 In the screencap below, I extracted prices that are highlighted yellow for the prices on 
 the "Flights" page and red for the prices in the "Travelers" page. I checked the 
-summation of both of the prices with the final price highlighted green. 
+summation of both of the prices with the final price highlighted green. Essentially what 
+I included is a check to make sure that the sum of the prices in Assertion (1) is equal
+to the final price located in the green box on the Travelers Page. With Assertion (2), I included  
+a check to make sure that the prices on the Travelers page is correct.
 
-Assertion (1)
-![Image of Yaktocat](https://github.com/carlmontemayor/AllegaintCodingChallenge/blob/master/screenshots%20(referenced%20in%20README.md)/Flights%20Page.png)
+###Assertion (1)
+![Flights Page](https://github.com/carlmontemayor/AllegaintCodingChallenge/blob/master/screenshots%20(referenced%20in%20README.md)/Flights%20Page.png)
 
-Assertion (2)
-![alt text][Travelers Page]
-[Travelers Page]: https://github.com/carlmontemayor/AllegaintCodingChallenge/blob/master/screenshots%20(referenced%20in%20README.md)/Traveler's%20Page.png "Travelers Page Prices"
-   
+###Assertion (2)
+![Travelers Page](https://github.com/carlmontemayor/AllegaintCodingChallenge/blob/master/screenshots%20(referenced%20in%20README.md)/Traveler's%20Page.png)
 
 ## Installation
 
