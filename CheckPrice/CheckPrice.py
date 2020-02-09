@@ -202,8 +202,8 @@ class CheckPrice():
 
         # Delete cookies pop-up
         privacyXPath = '//*[@id="privacy-policy-footer-close"]'
-        privacyPathButton = self.browser.find_element_by_xpath(privacyXPath).click()
-       
+        #privacyPathButton = self.browser.find_element_by_xpath(privacyXPath).click()
+        WebDriverWait(self.browser, 20).until(EC.element_to_be_clickable((By.XPATH, privacyXPath))).click()
 
 
         # Let animations/page load
