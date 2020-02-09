@@ -203,6 +203,8 @@ class CheckPrice():
         # Delete cookies pop-up
         privacyXPath = '//*[@id="privacy-policy-footer-close"]'
         privacyPathButton = self.browser.find_element_by_xpath(privacyXPath).click()
+       
+
 
         # Let animations/page load
         sleep(5)
@@ -216,6 +218,7 @@ class CheckPrice():
         # Get the departing price
         departPrices = self.browser.find_element_by_xpath(departPricesPath) 
 
+        
         # Filter price
         departPrices = str(departPrices.text).replace('$', '').split() 
         departPrices = departPrices[1]
@@ -282,6 +285,9 @@ class CheckPrice():
             sleep(1)
        
         # Extract the prices from the traveler's page
+
+        # Let animations/page load
+        sleep(5)
 
         # Get the XPath to the table
         pricesXPath = '//*[@id="pricing"]/div/table/tbody[1]/tr' 

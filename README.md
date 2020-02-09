@@ -71,6 +71,11 @@ python -m unittest discover
 
 Once finished, there is a unittesting.log file that can be opened to check functionality.
 
+## Notes on running
+The actual assertion statement that is made is within the checkData() function. The unittests
+are there for me to test and make sure that the functions within the CheckPrice class are actually
+ran successfully.
+
 ## Technology Used
 Languages: Python
 Frameworks: unittest (from Python) and Selenium
