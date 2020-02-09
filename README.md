@@ -18,6 +18,14 @@ the prices were complete for both pages.
 In the screencap below, I extracted prices that are highlighted yellow for the prices on 
 the "Flights" page and red for the prices in the "Travelers" page. I checked the 
 summation of both of the prices with the final price highlighted green. 
+
+Assertion (1)
+![alt text][Flights Page]
+[Flights Page]: https://github.com/carlmontemayor/AllegaintCodingChallenge/blob/master/screenshots%20(referenced%20in%20README.md)/Flights%20Page.png "Flights Page Prices"
+
+Assertion (2)
+![alt text][Travelers Page]
+[Travelers Page]: https://github.com/carlmontemayor/AllegaintCodingChallenge/blob/master/screenshots%20(referenced%20in%20README.md)/Traveler's%20Page.png "Travelers Page Prices"
    
 
 ## Installation
