@@ -202,8 +202,9 @@ class CheckPrice():
 
         # Delete cookies pop-up
         privacyXPath = '//*[@id="privacy-policy-footer-close"]'
-        #privacyPathButton = self.browser.find_element_by_xpath(privacyXPath).click()
         WebDriverWait(self.browser, 20).until(EC.element_to_be_clickable((By.XPATH, privacyXPath))).click()
+
+        print("deleted path")
 
 
         # Let animations/page load
@@ -328,8 +329,9 @@ class CheckPrice():
       """
       # Conduct assertion (1)
       try:
-          assert self.departPrice + self.returnPrice == self.finalPrice, 'Assertion failed, price from Flights do not match'
+          assert self.departPrice + self.returnPrice == self.finalPrice, 'Assertion failed, price from Flights does not match'
           print("Prices Match on the Flights Page!")
+          print(str(self.departPrice) + " + " + str(self.returnPrice) + " = " + str(self.finalPrice))
       except:
           raise Exception("final price does not equal return and depart flights")
 
@@ -337,8 +339,15 @@ class CheckPrice():
       # Conduct assertion (2)
       try:
           flightTotal = sum(self.prices)
-          assert flightTotal == self.finalPrice, 'Assertion failed, price from Traveler\'s page do not match'
-          print("Prices match on the Travelers Page!")
+      
+          stringPrice = [str(price) for price in self.prices]
+          
+          assert flightTotal == self.finalPrice, 'Assertion failed, price from Traveler\'s page does not match'
+
+          print("\nPrices match on the Travelers Page!")
+
+          # Unpacking operator in python is not available in version 2.7
+          print(stringPrice[0] + " + " + stringPrice[1] + " + " + stringPrice[2] + " = " + str(self.finalPrice))
       except:
           raise Exception("final price does not equal return and depart flights")
 

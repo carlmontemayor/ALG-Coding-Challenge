@@ -57,7 +57,7 @@ class TestCheckPrice(unittest.TestCase):
             logger.warning('Error with connection to ' + correctUrl)
 
 
-    def test_submitTravelForm(self):
+    def test_01_submitTravelForm(self):
         """
         Test the submitTravelForm() function. 
         """
@@ -72,9 +72,29 @@ class TestCheckPrice(unittest.TestCase):
             logger.info('Depart/Return flights submitted.')
         else:
             logger.warning('Depart/Return flights not submitted correctly')
+  
+    def test_02_fillTravelersForm(self):
+        """
+        Tests the navigation of the fillTravelersForm
+        """
+        sleep(3)
+        res = self.testCheckPrice.fillTravelersForm()
+
+        # Assert if result attained is a empty
+        self.assertTrue(self.testCheckPrice, "prices are empty: expected\
+                        value {" + "True }" + "actual value {" + res + "}")
+
+        self.assertIsInstance(self.testCheckPrice.prices, list, "prices are not\
+                              a list: expected value {" + "list}" + "actual\
+                              value }" + res + "}")
+
+        if res:
+            logger.info("finished navigation to travelers")
+        else:
+            logger.warning("navigation occurred during navigation to travelers page")
 
     # assert Raises in unittest
-    def test_checkData(self):
+    def test_03_checkData(self):
         """
         Asserts that the extracted prices are equal to the final price of 
         the items in both the traveler's page and the flight's page
@@ -120,7 +140,7 @@ class TestCheckPrice(unittest.TestCase):
 
         
 
-    def test_terminate(self):
+    def test_04_terminate(self):
         """
         Tests the terminate() function
         Will assertTrue() if terminate actually terminates
