@@ -3,7 +3,7 @@
 The solution to the coding challenge given that checks to see if the final price of 
 one Allegiant flight (round-trip) is equal to the price of all selected items. 
 
-Included is also small unittests to ensure that the program works correctly.
+Included are also small unittests to ensure that the program works correctly.
 
 The CheckPrice class included has functionality that tests and checks 2 conditions:\
     (1) The prices of selected items from the "Flights" page is equal to the price
@@ -133,7 +133,7 @@ python -m unittest discover
 Once finished, there is a unittesting.log file that can be opened to check functionality.
 
 ## Note on running
-The program and thee uunittests run as is after cloning the repository, however, there may be some problems that occur
+The program and the unittests run as is after cloning the repository, however, there may be some problems that occur
 that have to do with how the HTML/CSS elements are rendered. Just to ensure, the program should be ran
 at least twice to make sure this isn't the case.
 
