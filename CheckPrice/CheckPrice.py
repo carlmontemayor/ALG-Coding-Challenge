@@ -204,9 +204,6 @@ class CheckPrice():
         privacyXPath = '//*[@id="privacy-policy-footer-close"]'
         WebDriverWait(self.browser, 20).until(EC.element_to_be_clickable((By.XPATH, privacyXPath))).click()
 
-        print("deleted path")
-
-
         # Let animations/page load
         sleep(5)
 
