@@ -35,9 +35,8 @@ the green box.
 The following lines of code are where I actually make the assertions.
 
 
-In Module CheckPrice.py 327: 333
-```
-327       # Conduct assertion (1)                                                                                                             
+In Module CheckPrice.py 328: 333
+```                                                                                                        
 328       try:
 329           assert self.departPrice + self.returnPrice == self.finalPrice, 'Assertion failed, price from Flights does not match'
 330           print("Prices Match on the Flights Page!")
