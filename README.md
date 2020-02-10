@@ -137,6 +137,6 @@ that have to do with how the HTML/CSS elements are rendered. Just to ensure, the
 at least twice to make sure this isn't the case.
 
 ## Technology Used
-Languages: Python\
+Languages: Python 2.7\
 Frameworks: unittest (from Python) and Selenium\
 Browser: Google Chrome
