@@ -30,11 +30,11 @@ class TestCheckPrice(unittest.TestCase):
         Set up the browser, with Options and additional specifications
         """
         # Create browser options 
-        options = Options()
-        options.add_argument('--headless')
+        self.options = Options()
+        self.options.add_argument('--headless')
          
         # Instantiate CheckPrice object
-        self.testCheckPrice = CheckPrice(options)
+        self.testCheckPrice = CheckPrice(self.options)
 
         logger.info("CheckPrice instantiated. Automation started")
 
@@ -77,16 +77,23 @@ class TestCheckPrice(unittest.TestCase):
         """
         Tests the navigation of the fillTravelersForm
         """
-        sleep(3)
+        # Had to instantiate and run functions in order for the ordering of tests
+        # to make sense when running. 
+        self.testCheckPrice = CheckPrice(self.options)
+        self.testCheckPrice.submitTravelForm()
         res = self.testCheckPrice.fillTravelersForm()
+        self.testCheckPrice.checkData()
+        self.testCheckPrice.terminate()
+        
 
         # Assert if result attained is a empty
         self.assertTrue(self.testCheckPrice, "prices are empty: expected\
-                        value {" + "True }" + "actual value {" + res + "}")
+                        value {" + "True }" + "actual value {" + str(type(res))
+                        + "}")
 
         self.assertIsInstance(self.testCheckPrice.prices, list, "prices are not\
                               a list: expected value {" + "list}" + "actual\
-                              value }" + res + "}")
+                              value }" + str(type(res)) + "}")
 
         if res:
             logger.info("finished navigation to travelers")
@@ -104,8 +111,15 @@ class TestCheckPrice(unittest.TestCase):
             (2) When we get to the Travelers page as it shoes the charges and 
                 discounts along to check with the final price on the page
         """
-        # Assert that the item's match the final price
+        # Had to instantiate and run functions in order for the ordering of tests
+        # to make sense when running. 
+        self.testCheckPrice = CheckPrice(self.options)
+        self.testCheckPrice.submitTravelForm()
+        self.testCheckPrice.fillTravelersForm()
         res = self.testCheckPrice.checkData()
+        self.testCheckPrice.terminate()
+
+        # Assert that the item's match the final price
          
         # Assert if the functions actually runs/finishes
         self.assertTrue(res, "prices not checked: expected value {"
@@ -120,12 +134,13 @@ class TestCheckPrice(unittest.TestCase):
 
         # Assertion (1)
         sumOfPrices = self.testCheckPrice.departPrice + self.testCheckPrice.returnPrice
-        finalCost = self.testCheckPrice.departPrice
+        print(sumOfPrices)
+        finalCost = self.testCheckPrice.finalPrice
 
         res = self.assertEqual(sumOfPrices, finalCost,
                          "prices not equal: expected value {" +  
                          str(finalCost) + "} actual value {"
-                         + str(sumOfPrices))
+                         + str(sumOfPrices) + "}")
 
         # Assertion (2)
         sumOfCosts = sum(self.testCheckPrice.prices)
