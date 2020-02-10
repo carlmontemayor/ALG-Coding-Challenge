@@ -53,7 +53,7 @@ https://sites.google.com/a/chromium.org/chromedriver/downloads
 
 Once cloned, the program can be run by doing the following within the terminal:
 ```
-cd Allegiant\ Coding\ Challenge/ 
+cd ALG-Coding-Challenge/
 ```
 
 Once inside the Coding Challenge directory, run the program by typing:
