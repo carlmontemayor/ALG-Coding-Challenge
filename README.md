@@ -23,7 +23,8 @@ to the final price located in the green box on the Travelers Page. With Assertio
 a check to make sure that the prices on the Travelers page is correct.
 
 The prices with in the yellow boxes AND the prices in the red box both equal to the price shown in 
-the green box.
+the green box. Please note that prices may vary when running the program since these screenshots were
+taken two days ago.
 
 ### Flights Page 
 ![Flights Page](https://github.com/carlmontemayor/AllegaintCodingChallenge/blob/master/screenshots%20(referenced%20in%20README.md)/Flights%20Page.png)
