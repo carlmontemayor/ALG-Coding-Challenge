@@ -31,6 +31,49 @@ the green box.
 ### Travelers Page
 ![Travelers Page](https://github.com/carlmontemayor/AllegaintCodingChallenge/blob/master/screenshots%20(referenced%20in%20README.md)/Traveler's%20Page.png)
 
+### Assertions
+The following lines of code are where I actually make the assertions.
+
+
+In Module CheckPrice.py 327: 333
+```
+327       # Conduct assertion (1)                                                                                                             
+328       try:
+329           assert self.departPrice + self.returnPrice == self.finalPrice, 'Assertion failed, price from Flights does not match'
+330           print("Prices Match on the Flights Page!")
+331           print(str(self.departPrice) + " + " + str(self.returnPrice) + " = " + str(self.finalPrice))
+332       except:
+333           raise Exception("final price does not equal return and depart flights")
+```
+
+In Module CheckPrice.py 337: 349
+```
+337       try:
+338           flightTotal = sum(self.prices)
+339       
+340           stringPrice = [str(price) for price in self.prices]
+341           
+342           assert flightTotal == self.finalPrice, 'Assertion failed, price from Traveler\'s page does not match'
+343 
+344           print("\nPrices match on the Travelers Page!")
+345 
+346           # Unpacking operator in python is not available in version 2.7
+347           print(stringPrice[0] + " + " + stringPrice[1] + " + " + stringPrice[2] + " = " + str(self.finalPrice))
+348       except:
+349           raise Exception("final price does not equal return and depart flights")
+```
+
+In UnitTest test_CheckPrice.py 90:96
+```
+ 90         self.assertTrue(self.testCheckPrice, "prices are empty: expected\                                                                 
+ 91                         value {" + "True }" + "actual value {" + str(type(res))
+ 92                         + "}")
+ 93 
+ 94         self.assertIsInstance(self.testCheckPrice.prices, list, "prices are not\
+ 95                               a list: expected value {" + "list}" + "actual\
+ 96                               value }" + str(type(res)) + "}")
+```
+
 ## Installation
 
 Install the module by cloning the repository:
