@@ -36,7 +36,8 @@ The following lines of code are where I actually make the assertions.
 
 
 In Module CheckPrice.py 328: 333
-```                                                                                                        
+```
+327       # Conduct assertion (1)
 328       try:
 329           assert self.departPrice + self.returnPrice == self.finalPrice, 'Assertion failed, price from Flights does not match'
 330           print("Prices Match on the Flights Page!")
@@ -47,6 +48,7 @@ In Module CheckPrice.py 328: 333
 
 In Module CheckPrice.py 337: 349
 ```
+336       # Conduct assertion (2)
 337       try:
 338           flightTotal = sum(self.prices)
 339       
@@ -62,15 +64,31 @@ In Module CheckPrice.py 337: 349
 349           raise Exception("final price does not equal return and depart flights")
 ```
 
-In UnitTest test_CheckPrice.py 90:96
+In UnitTest test_CheckPrice.py 135: 143
 ```
- 90         self.assertTrue(self.testCheckPrice, "prices are empty: expected\                                                                 
- 91                         value {" + "True }" + "actual value {" + str(type(res))
- 92                         + "}")
- 93 
- 94         self.assertIsInstance(self.testCheckPrice.prices, list, "prices are not\
- 95                               a list: expected value {" + "list}" + "actual\
- 96                               value }" + str(type(res)) + "}")
+135         # Assertion (1)
+136         sumOfPrices = self.testCheckPrice.departPrice + self.testCheckPrice.returnPrice
+137         print(sumOfPrices)
+138         finalCost = self.testCheckPrice.finalPrice
+139 
+140         res = self.assertEqual(sumOfPrices, finalCost,
+141                          "prices not equal: expected value {" +
+142                          str(finalCost) + "} actual value {"
+143                          + str(sumOfPrices) + "}")
+```
+
+In UnitTest test_CheckPrice.py 145: 154
+```
+145         # Assertion (2)
+146         sumOfCosts = sum(self.testCheckPrice.prices)
+147 
+148         self.assertEqual(sumOfCosts, finalCost, "prices not equal: expected"
+149                          + "value {" + str(finalCost) + "} actual value {" +
+150                          str(sumOfCosts))
+151 
+152         # If exception occurs, test if it is correctly raised
+153         self.assertRaises(Exception, self.testCheckPrice.checkData(), 
+154                           str(finalCost))
 ```
 
 ## Installation
