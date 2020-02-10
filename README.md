@@ -115,10 +115,8 @@ python -m unittest discover
 Once finished, there is a unittesting.log file that can be opened to check functionality.
 
 ## Notes on running
-The actual assertion statement that is made is within the checkData() function. The unittests
-are there for me to test and make sure that the functions within the CheckPrice class are actually
-ran successfully.
-
+At least two runs of the module and unittests should be conducted to ensure that the program runs just to make sure
+there aren't any problems with rendering of the HTML/CSS elements.
 Although my program runs and it works from the assertions and actually running the program itself, I cannot control
 how fast the the HTML/CSS elements are actually rendered on the page. As a result, multiple runs of the program and 
 unittests will help as the speeds in which to wait for the rendering of elements may vary.
