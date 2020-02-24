@@ -136,6 +136,23 @@ class CheckPrice():
         # Let animations/page load
         sleep(1)
 
+        # Moved month forward to ensure depart/return dates are valid 
+        monthChooserXPath = ('/html/body/div[5]/div/div/div[1]/div[1]/div/div[2]/ \
+                              div[1]/div/div/div[1]/form/div/div[1]/div[2]/div[1] \
+                              /div/div/div/div[2]/div[1]/a[2]/span')
+
+        chooseMonth = self.browser.find_element_by_xpath(monthChooserXPath).click()
+
+        sleep(1)
+
+        chooseMonth = self.browser.find_element_by_xpath(monthChooserXPath).click()
+
+        sleep(1)
+
+        chooseMonth = self.browser.find_element_by_xpath(monthChooserXPath).click()
+
+        sleep(1)
+
         # Locate xpath for date to depart
         departDateXPath = ('/html/body/div[5]/div/div/div[1]/div[1]/div/div[2]'
                            '/div[1]/div/div/div[1]/form/div/div[1]/div[2]/div[1'
