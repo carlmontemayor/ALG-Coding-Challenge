@@ -134,7 +134,7 @@ Once finished, there is a unittesting.log file that can be opened to check funct
 
 ## Note on running
 The program and the unittests run as is after cloning the repository, however, there may be some problems that occur
-that have to do with how the HTML/CSS elements are rendered. Just to ensure, the program should be ran
+that have to do with how the HTML/CSS elements are rendered, more specifically the pop-up that allows the user to accept cookeis. In previuos runs and before turning the coding challenge in, there was no error in regards to that specific pop-up. But recently as I checked on February 11, 2020, it appears that there was an update to the website that shows a different rendering error.  Just to ensure, the program should be ran
 at least twice to make sure this isn't the case.
 
 ## Technology Used
