@@ -142,8 +142,11 @@ class CheckPrice():
                               /div/div/div/div[2]/div[1]/a[2]/span')
 
         chooseMonth = self.browser.find_element_by_xpath(monthChooserXPath).click()
+        sleep(1)
         chooseMonth = self.browser.find_element_by_xpath(monthChooserXPath).click()
+        sleep(1)
         chooseMonth = self.browser.find_element_by_xpath(monthChooserXPath).click()
+        sleep(1)
 
         sleep(1)
 
