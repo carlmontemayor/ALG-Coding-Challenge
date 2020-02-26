@@ -96,7 +96,7 @@ In UnitTest test_CheckPrice.py 145: 154
 
 Install the module by cloning the repository:
 ```
-git clone git@github.com:carlmontemayor/ALG-Coding-Challenge.git
+git clone https://github.com/carlmontemayor/ALG-Coding-Challenge.git
 ```
 
 Before using this module, Selenium must also be installed. It can be installed using pip:
