@@ -147,6 +147,8 @@ class CheckPrice():
         sleep(1)
         chooseMonth = self.browser.find_element_by_xpath(monthChooserXPath).click()
         sleep(1)
+        chooseMonth = self.browser.find_element_by_xpath(monthChooserXPath).click()
+        sleep(1)
 
         sleep(1)
 
